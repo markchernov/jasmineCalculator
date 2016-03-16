@@ -4,38 +4,54 @@ module.exports = Calculator;
 function Calculator() {
 
 
-this.lastResult = 0;
+var lastResult = 0;
 
 
 this.add = function(number) {
     
     
-    this.lastResult = this.lastResult + number;
-    return this.lastResult
+    lastResult = lastResult + number;
+    return this.getLastResult()
     
 };
 
 this.subtract = function(number) {
     
-    this.lastResult = this.lastResult - number;
-    return this.lastResult
+    lastResult = lastResult - number;
+    return this.getLastResult()
 };
 
 this.multiply = function(number) {
     
-    this.lastResult = this.lastResult * number;
-    return this.lastResult
+    lastResult = lastResult * number;
+    return this.getLastResult()
 };
 
 this.divide = function(number) {
     
-    this.lastResult = this.lastResult/number;
-    return this.lastResult
+    lastResult = lastResult/number;
+    return this.getLastResult()
 };
 
 this.clear = function() {
     
-    this.lastResult = 0;
-    return this.lastResult
-}}
+    lastResult = 0;
+    return this.getLastResult()
+    
+}
+    
+  this.getLastResult = function() {
+      
+      
+      return lastResult
+      
+      
+  }  
+    
+    
+    
+    
+    
+    
+}
 
